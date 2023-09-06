@@ -11,4 +11,11 @@ class TapController extends GetxController {
     update();
     print(_counter);
   }
+
+  // function to decrement the counter
+  void decrement() {
+    _counter--;
+    update();
+    print(_counter);
+  }
 }
