@@ -17,6 +17,7 @@ class NextPage extends StatelessWidget {
       appBar: AppBar(
         // Add title text to the Appbar
         title: Text("Second Page"),
+        backgroundColor: Color.fromARGB(255, 75, 59, 119),
       ),
       // Add body to the Scaffold
       body: Center(
