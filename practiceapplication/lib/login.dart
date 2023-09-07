@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:practiceapplication/signapp.dart';
 
 // create a stataeless widget for login screen
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,15 +70,18 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                const Color.fromARGB(255, 85, 176, 250)),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
+                        SizedBox(
+                          width: 300,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  const Color.fromARGB(255, 85, 176, 250)),
+                              foregroundColor:
+                                  MaterialStateProperty.all(Colors.white),
+                            ),
+                            child: const Text('Sign In'),
                           ),
-                          child: const Text('sign in'),
                         ),
                       ]),
                 ),
@@ -92,7 +97,9 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
             // Text button for dont have an account
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => SignApp());
+              },
               child: const Text('Don\'t have an account? Sign up'),
             ),
           ]),
