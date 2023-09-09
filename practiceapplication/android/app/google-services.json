@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787115544676",
+    "project_id": "getx-authentication-project",
+    "storage_bucket": "getx-authentication-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787115544676:android:677bf91e34759a87d04f71",
+        "android_client_info": {
+          "package_name": "com.example.practiceapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb7cYEwZO3zHGksgf9piRI1wODF76wzWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
