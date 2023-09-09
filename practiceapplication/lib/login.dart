@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:practiceapplication/controllers/auth-controller.dart';
 import 'package:practiceapplication/signapp.dart';
 
 // create a stataeless widget for login screen
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +52,10 @@ class LoginScreen extends StatelessWidget {
                                   color: Colors.black,
                                   fontFamily: AutofillHints.addressState)),
                           const SizedBox(height: 20),
-                          const SizedBox(
+                           SizedBox(
                             width: 300,
                             child: TextField(
+                              controller: emailController,
                               decoration: InputDecoration(
                                 icon: Icon(Icons.email),
                                 hintText: 'Email',
@@ -60,9 +64,10 @@ class LoginScreen extends StatelessWidget {
                           ),
                           // INOUT FIELD FOR PASSWORD
                           const SizedBox(height: 20),
-                          const SizedBox(
+                          SizedBox(
                             width: 300,
                             child: TextField(
+                              controller: passwordController,
                               obscureText: true,
                               decoration: InputDecoration(
                                 icon: Icon(Icons.lock),
@@ -74,7 +79,9 @@ class LoginScreen extends StatelessWidget {
                           SizedBox(
                             width: 300,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
+                              },
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     const Color.fromARGB(255, 85, 176, 250)),

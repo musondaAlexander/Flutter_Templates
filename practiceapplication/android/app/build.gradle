@@ -1,5 +1,5 @@
 plugins {
-    apply plugin: 'com.google.gms.google-services' 
+    id 'com.google.gms.google-services'
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
@@ -50,7 +50,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        MultiDexEnable true
+//        MultiDexEnable true
     }
 
     buildTypes {

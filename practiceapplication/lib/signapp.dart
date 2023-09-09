@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:practiceapplication/login.dart';
+
+import 'controllers/auth-controller.dart';
 
 // create a stataeless widget for login screen
 class SignApp extends StatelessWidget {
@@ -87,14 +90,15 @@ class SignApp extends StatelessWidget {
                                       MaterialStateProperty.all(Colors.white),
                                 ),
                                 onPressed: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                        content: Text(emailController.text),
-                                      );
-                                    },
-                                  );
+                                  // showDialog(
+                                  //   context: context,
+                                  //   builder: (context) {
+                                  //     return AlertDialog(
+                                  //       content: Text(emailController.text),
+                                  //     );
+                                  //   },
+                                  // ),
+                                  AuthController.instance.register(emailController.text.trim(),passwordController.text.trim());
                                 },
                                 child: Text('Sign Up'),
                               ),
