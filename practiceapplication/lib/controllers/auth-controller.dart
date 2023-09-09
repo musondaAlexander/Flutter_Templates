@@ -23,10 +23,10 @@ class AuthController extends GetxController {
 
   // create the initialScreen Method To check if the user is logged in or not
   _initialScreen(User? user) {
-    if (_user.value == null) {
+    if (user == null) {
       Get.offAll(() => LoginScreen());
     } else {
-      Get.offAll(() => const Home());
+      Get.offAll(() => Home(email:user.email!));
     }
   }
 

@@ -3,7 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:practiceapplication/controllers/auth-controller.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  String email;
+   Home({Key?key,required this.email}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class Home extends StatelessWidget {
          child: Column(
            mainAxisAlignment: MainAxisAlignment.center,
            children: [
-             Text("Hello Welcome To  The Home Page ",
+             Text("welcome: $email",
                style:  TextStyle(
                  fontSize: 20,
                  color: Colors.cyanAccent,
