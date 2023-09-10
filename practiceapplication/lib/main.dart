@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:practiceapplication/controllers/auth-controller.dart';
 import 'package:practiceapplication/login.dart';
 import 'package:get/get.dart';
+import 'package:practiceapplication/splash_screen.dart';
 
 
 void main() async{
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
